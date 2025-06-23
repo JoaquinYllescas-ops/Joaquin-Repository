@@ -226,7 +226,7 @@ class LexerTINY:
             encontrado = False
             for tipo, afd in self.afds:
                 # Buscar la subcadena más larga que coincida
-                max_j = min(i + 10, n)  # Límite para no revisar demasiado
+                max_j = min(i + 10, n)  # Acoto el maximo de i para evitar sobrepasar el final del codigo fuente
                 for j in range(i + 1, max_j + 1):
                     subcadena = codigo[i:j]
                     if afd(subcadena):
@@ -246,7 +246,7 @@ class LexerTINY:
                 i += 1
                 
         return tokens     
-# Código de prueba en TINY
+# 6) Código de prueba en TINY
 codigo_ejemplo = """
 program 1.
 var x: int = 10;
@@ -260,7 +260,7 @@ end
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")
 
@@ -273,14 +273,12 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")
-# Código de prueba en TINY
 
 codigo_ejemplo = """
 program 3.
@@ -296,15 +294,12 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")
-# Código de prueba en TINY
-
 
 codigo_ejemplo = """
 program 4.
@@ -316,11 +311,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")    
 
@@ -336,11 +330,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")  
 
@@ -353,11 +346,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')") 
 
@@ -373,11 +365,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")   
 
@@ -387,11 +378,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")          
 
@@ -406,11 +396,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")          
 
@@ -426,11 +415,10 @@ begin
 end
 """
 
-# Crear y ejecutar el lexer
 lexer = LexerTINY()
 tokens = lexer.tokenize(codigo_ejemplo)
 
-# Imprimir los tokens encontrados
+# 7) Imprimir los tokens encontrados
 for token in tokens:
     print(f"Token(tipo='{token.type}', valor='{token.value}')")          
 
